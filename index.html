@@ -13,6 +13,7 @@
     <script defer src="twitch_vod_shout_out.js"></script>
   </head>
   <body>
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <div
       id="twitchVodShoutOutContainerId"
       class="twitch-vod-shout-out-container"
@@ -20,10 +21,12 @@
       <iframe
         width="1920"
         height="1080"
+        src
         frameborder="0"
         id="twitchVodShoutOutId"
         class="twitch-vod-shout-out"
         allowfullscreen
+        allow="autoplay; muted"
       ></iframe>
     </div>
   </body>
