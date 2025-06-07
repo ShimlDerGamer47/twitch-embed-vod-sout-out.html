@@ -22,7 +22,7 @@ body {
   background: transparent;
   width: 100vw;
   height: 100vh;
-  overflow: hidden hidden;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -43,6 +43,7 @@ body::-webkit-scrollbar {
 }
 
 .twitch-vod-shout-out {
+  font-family: var(--font-family);
   background: transparent;
   width: 100vw;
   height: 100vh;
