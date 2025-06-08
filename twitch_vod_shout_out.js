@@ -77,6 +77,18 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("muted", muted);
   }
 
+  twitchVodShoutOut.addEventListener("load", () => {
+    const player = new Twitch.Player(twitchVodShoutOut);
+    body.addEventListener(
+      "click",
+      () => {
+        player.setMuted(false);
+        player.play().catch(() => {});
+      },
+      { once: true }
+    );
+  });
+
   const domain = window.location.hostname;
   const embedParams = new URLSearchParams({
     video: videoId,
