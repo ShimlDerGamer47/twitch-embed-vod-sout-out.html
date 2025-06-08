@@ -1,17 +1,56 @@
 document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
+  const twitchVodShoutOutContainer = document.getElementById(
+    "twitchVodShoutOutContainerId"
+  );
   const twitchVodShoutOut = document.getElementById("twitchVodShoutOutId");
   const params = new URLSearchParams(window.location.search);
   const videoId = params.get("videoId");
 
   if (!videoId) {
     console.warn("Kein 'videoId' Parameter in der URL gefunden.");
-    body.innerHTML = `<div style="font-family: Arial, Helvetica, sans-serif; background: black; position: absolute; top: 50%; left: 50%; transform: translate(-50%, 50%); display: flex; align-items: center; align-content: center; justify-items: center; justify-content: center; border: 2px solid black; border-radius: 5px; padding: 5px 5px; margin: 10px 10px 10px 10px;">
-      <p style="display: flex; align-items: center; align-content: center; justify-items: center; justify-content: center; text-align: center; font-size: 25px; color: white;">
-        Bitte gib eine Video-ID an!<br>
-        ?videoId=1234&autoplay=true&muted=true
-      </p>
-    </div>`;
+
+    const divErrorElement = document.createElement("div");
+    Object.assign(divErrorElement.style, {
+      background: "#000000",
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      display: "flex",
+      alignItems: "center",
+      alignContent: "center",
+      justifyItems: "center",
+      justifyContent: "center",
+      border: "2px solid black",
+      borderRadius: "5px",
+      padding: "5px 5px",
+      margin: "10px 10px 10px 10px"
+    });
+    body.appendChild(divErrorElement);
+
+    const pErrorElement = document.createElement("p");
+    Object.assign(pErrorElement.style, {
+      fontFamily: "Arial, Helvetica, sans-serif",
+      background: "#000000",
+      display: "flex",
+      alignItems: "center",
+      alignContent: "center",
+      justifyItems: "center",
+      justifyContent: "center",
+      border: "1px solid transparent",
+      borderRadius: "5px",
+      padding: "5px 5px",
+      margin: "5px 5px 5px 5px",
+      textAlign: "center",
+      fontSize: "25px",
+      color: "#ffffff",
+      textDecoration: "none"
+    });
+    pErrorElement.innerHTML =
+      "Bitte gib eine Video-ID an!<br>?videoId=1234&autoplay=true&muted=true";
+    divErrorElement.appendChild(pErrorElement);
+
     return;
   }
 
