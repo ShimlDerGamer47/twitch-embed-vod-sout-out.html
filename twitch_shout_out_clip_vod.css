@@ -1,0 +1,84 @@
+:root {
+  --font-family: "Roboto-Bold", Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: var(--font-family);
+  src: local("/Roboto/Roboto-Bold.woff2") url("/Roboto/Roboto-Bold.woff2")
+    format("woff2");
+  font-weight: bold, normal;
+  font-style: normal;
+  font-variant: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  font-family: var(--font-family);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.clip-embed-container {
+  font-family: var(--font-family);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.clip-embed {
+  font-family: var(--font-family);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.clip-embed-container {
+  font-family: var(--font-family);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.vod-embed {
+  font-family: var(--font-family);
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
+}
